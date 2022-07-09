@@ -90,6 +90,10 @@ body {
 
 /* MAIN */
 
+.main {
+    margin: 0 0 150px 0;
+}
+
 /* SECTION ABOUT */
 
 .section-about {
@@ -293,4 +297,43 @@ body {
     color: black;
     border-bottom-left-radius: .5rem;
     border-bottom-right-radius: .5rem;
+}
+
+/* SECTION PRICE */
+
+.section-price {
+    margin: 0 0 150px 0;
+}
+
+.price-container {
+    text-align: center;
+    justify-content: space-between;
+}
+
+.price-box {
+    width: 322px;
+    height: 456px;
+    padding: 24px 70px 32px;
+    border-radius: 0.5rem;
+    background-color: var(--primary-color);
+    color: black;
+}
+
+/* SECTION CLIENT */
+
+.section-client {
+    margin: 0 0 150px 0;
+}
+
+/* SECTION SUB */
+
+.sub-block {
+    width: 970px;
+    height: 345px;
+    background-color: var(--btn-color);
+    border-radius: 2rem;
+}
+
+.sub-cont {
+    padding: 50px;
 }
