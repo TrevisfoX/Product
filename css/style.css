@@ -19,8 +19,7 @@ a:hover {
 }
 
 .container {
-    max-width: 1135px;
-    padding: 0 15px;
+    max-width: 1129px;
 }
 
 .title {
@@ -63,7 +62,8 @@ a:hover {
 .about-subtitle,
 .product-title,
 .price-list,
-.client-subtitle {
+.client-subtitle,
+.product-block {
     margin: 0 0 50px 0;
 }
 
@@ -174,10 +174,11 @@ a:hover {
 }
 
 .support-item {
+    min-height: 50px;
     font-weight: 400;
     line-height: 26px;
-    padding: 0 0 0 50px;
-    margin: 0 0 30px 0;
+    padding: 10px 0 0 50px;
+    margin: 0 0 30px 0px;
 }
 
 .orange-item {
@@ -263,7 +264,6 @@ a:hover {
 }
 
 .subscribe-block {
-    padding: 50px 0 0 62px;
     max-width: 920px;
     min-height: 345px;
     background-color: var(--btn-color);
@@ -312,4 +312,56 @@ a:hover {
 
 .feedback-card:hover {
     transform: scale(1.1);
+}
+
+@media only screen and (max-width : 585px) {
+    .button-group-header {
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
+    }
+
+    .about-main-title {
+        font-size: 36px;
+    }
+
+    .about-buttons-group {
+        margin: 0 auto;
+        flex-direction: column;
+        width: fit-content;
+    }
+
+    .button-start {
+        padding: 15px 25px;
+        margin: 0 0 28px 0;
+    }
+
+    .product-img {
+        margin: 0 0 24px 0;
+    }
+
+    .features-title {
+        margin: 0 0 8px 0;
+    }
+
+    .features-block {
+        margin: 0 0 32px 0;
+    }
+
+    .management-block,
+    .customer-block,
+    .section-product-2,
+    .section-content,
+    .section-price,
+    .section-client {
+        margin: 0 0 100px 0;
+    }
+
+    .support-item {
+        margin: 0 0 16px 0;
+    }
+
+    .subscribe-title {
+        font-size: 28px;
+    }
 }
