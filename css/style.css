@@ -7,14 +7,21 @@
     --font-family: "Poppins", sans-serif;
 }
 
-body {
-    font-family: var(--font-family);
-    background-color: var(--bg-color);
-    color: var(--primary-color);
+html {
+    scroll-behavior: smooth;
 }
 
 a,
 a:hover {
+    color: var(--primary-color);
+}
+
+.wrapper {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    font-family: var(--font-family);
+    background-color: var(--bg-color);
     color: var(--primary-color);
 }
 
@@ -87,12 +94,12 @@ a:hover {
     margin: 0 0 54px 0;
 }
 
-.navbar-logo,
-.footer-logo {
-    color: var(--primary-color);
-    font-weight: 700;
-    font-size: 30px;
-    line-height: 28px;
+.navbar-logo {
+    transition: 0.5s;
+}
+
+.navbar-logo:hover {
+    transform: scale(1.1);
 }
 
 .button-in {
@@ -312,6 +319,27 @@ a:hover {
 
 .feedback-card:hover {
     transform: scale(1.1);
+}
+
+#scrollToTop {
+    position: fixed;
+    bottom: 100px;
+    right: 100px;
+    z-index: 1;
+}
+
+.scroll {
+    cursor: pointer;
+    transition: 0.5s;
+    opacity: 1;
+}
+
+.scroll:hover {
+    transform: translateY(-15px);
+}
+
+.scroll-hide {
+    opacity: 0;
 }
 
 @media only screen and (max-width : 585px) {
