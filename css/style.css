@@ -130,7 +130,7 @@ a:hover {
     outline: none;
 }
 
-.change-mode {
+.switch-mode {
     cursor: pointer;
 }
 
@@ -312,15 +312,6 @@ a:hover {
     outline: none;
 }
 
-.feedback-card {
-    cursor: pointer;
-    transition: 0.5s;
-}
-
-.feedback-card:hover {
-    transform: scale(1.1);
-}
-
 #scrollToTop {
     position: fixed;
     bottom: 100px;
@@ -340,6 +331,34 @@ a:hover {
 
 .scroll-hide {
     opacity: 0;
+}
+
+.modal-title {
+    color: black;
+}
+
+.sign-in-input,
+.button-close {
+    box-shadow: none !important;
+}
+
+.sign-in-input:focus {
+    border-color: var(--btn-color);
+}
+
+.button-modal:hover {
+    background-color: #016f62;
+}
+
+.button-sign-in-with {
+    color: black;
+    background-color: inherit;
+    box-shadow: 2px 2px 5px -2px rgba(48, 48, 48, 1);
+}
+
+.button-sign-in-with:hover {
+    background-color: var(--btn-color);
+    color: var(--primary-color);
 }
 
 @media only screen and (max-width : 585px) {
