@@ -23,9 +23,7 @@
 		/>
 		<link rel="stylesheet" href="css/preloader.css" />
 		<link rel="stylesheet" href="css/bootstrap-reboot.min.css" />
-		<link rel="stylesheet" href="css/style.css" />
-		<!-- <link rel="stylesheet" href="css/dark-mode.css"> -->
-		<!-- <link rel="stylesheet" href="css/light-mode.css"> -->
+		<link rel="stylesheet" href="css/style.css" id="theme" />
 		<title>Product</title>
 	</head>
 	<body class="body">
@@ -115,49 +113,186 @@
 									>
 										Sign In
 									</button>
-									<a
+									<button
+										type="button"
+										data-bs-toggle="modal"
+										data-bs-target="#modalUp"
 										class="button button-up mb-lg-0 mb-md-3 mb-sm-3 mb-3"
-										>Sign Up</a
 									>
-									<img
-										width="24"
-										height="24"
-										class="change-mode ms-lg-4 ms-md-4 ms-sm-4 ms-0"
-										id="changeButton"
-										src="img/change-mode.svg"
-										alt="change site mode"
-									/>
+										Sign Up
+									</button>
 								</div>
 							</div>
 						</div>
 					</nav>
 				</div>
 			</header>
-			<!-- Modal -->
-			<div class="modal fade" id="modalIn" tabindex="-1" aria-labelledby="modalIn" aria-hidden="true">
-				<div class="modal-dialog">
-				  <div class="modal-content">
-					<div class="modal-header">
-					  <h2 class="modal-title" id="modalIn">Sign in for free</h2>
-					  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			<!-- Modal (sign in) -->
+			<div
+				class="modal fade modal-window"
+				id="modalIn"
+				tabindex="-1"
+				aria-labelledby="modalIn"
+				aria-hidden="true"
+			>
+				<div class="modal-dialog modal-dialog-centered">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h2 class="modal-title title" id="modalIn">
+								Sign in
+							</h2>
+							<button
+								type="button"
+								class="btn-close button-close"
+								data-bs-dismiss="modal"
+								aria-label="Close"
+							></button>
+						</div>
+						<div class="modal-body">
+							<form class="form-sign-in">
+								<div class="my-3">
+									<input
+										type="email"
+										class="form-control p-2 sign-in-input rounded-2"
+										id="floatingInput"
+										placeholder="name@example.com"
+									/>
+									<label for="floatingInput"
+										>Email address</label
+									>
+								</div>
+								<div class="mb-3">
+									<input
+										type="password"
+										class="form-control p-2 sign-in-input rounded-2"
+										id="floatingPassword"
+										placeholder="Password"
+									/>
+									<label for="floatingPassword"
+										>Password</label
+									>
+								</div>
+								<button
+									class="w-100 mb-2 p-3 fs-5 button button-modal rounded-3"
+									type="submit"
+								>
+									Sign in
+								</button>
+								<small class="text-muted"
+									>By clicking Sign in, you agree to the terms
+									of use. (It's a joke)</small
+								>
+								<h2
+									class="modal-title fs-4 fw-4 mt-5 mb-4 text-center"
+								>
+									OR
+								</h2>
+								<button
+									class="w-100 py-2 mb-3 button button-sign-in-with rounded-3"
+									type="submit"
+								>
+									Sign in with Twitter
+								</button>
+								<button
+									class="w-100 py-2 mb-3 button button-sign-in-with rounded-3"
+									type="submit"
+								>
+									Sign in with Facebook
+								</button>
+								<button
+									class="w-100 py-2 mb-3 button button-sign-in-with rounded-3"
+									type="submit"
+								>
+									Sign in with GitHub
+								</button>
+							</form>
+						</div>
 					</div>
-					<div class="modal-body">
-						<form>
-							<input type="email" name="" id="">
-
-							<input type="password" name="" id="">
-							
-							<button>Sign In</button>
-							<small>By clicking Sign in, you agree to the terms of use.</small>
-						</form>
-					</div>
-					<div class="modal-footer">
-					  
-					</div>
-				  </div>
 				</div>
-			  </div>
-
+			</div>
+			<!-- Modal (sign up) -->
+			<div
+				class="modal fade modal-window"
+				id="modalUp"
+				tabindex="-1"
+				aria-labelledby="modalUp"
+				aria-hidden="true"
+			>
+				<div class="modal-dialog modal-dialog-centered">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h2 class="modal-title title" id="modalIn">
+								Sign up
+							</h2>
+							<button
+								type="button"
+								class="btn-close button-close"
+								data-bs-dismiss="modal"
+								aria-label="Close"
+							></button>
+						</div>
+						<div class="modal-body">
+							<form class="form-sign-in">
+								<div class="my-3">
+									<input
+										type="email"
+										class="form-control p-2 sign-in-input rounded-2"
+										id="floatingInput"
+										placeholder="name@example.com"
+									/>
+									<label for="floatingInput"
+										>Email address</label
+									>
+								</div>
+								<div class="mb-3">
+									<input
+										type="password"
+										class="form-control p-2 sign-in-input rounded-2"
+										id="floatingPassword"
+										placeholder="Password"
+									/>
+									<label for="floatingPassword"
+										>Password</label
+									>
+								</div>
+								<button
+									class="w-100 mb-2 p-3 fs-5 button button-modal rounded-3"
+									type="submit"
+								>
+									Sign up
+								</button>
+								<small class="text-muted"
+									>By clicking Sign up, you agree to the terms
+									of use. (It's a joke)</small
+								>
+								<h2
+									class="modal-title fs-4 fw-4 mt-5 mb-4 text-center"
+								>
+									OR
+								</h2>
+								<button
+									class="w-100 py-2 mb-3 button button-sign-in-with rounded-3"
+									type="submit"
+								>
+									Sign up with Twitter
+								</button>
+								<button
+									class="w-100 py-2 mb-3 button button-sign-in-with rounded-3"
+									type="submit"
+								>
+									Sign up with Facebook
+								</button>
+								<button
+									class="w-100 py-2 mb-3 button button-sign-in-with rounded-3"
+									type="submit"
+								>
+									Sign up with GitHub
+								</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
 			<!-- MAIN -->
 			<main class="main">
 				<!-- ARTICLE -->
@@ -458,7 +593,7 @@
 									<div class="content-block">
 										<img
 											src="img/content/content-item-1.svg"
-											style="width: 100%"
+											style="width: 100%;"
 											alt="card-image"
 										/>
 										<div class="card-body">
@@ -479,7 +614,7 @@
 									<div class="content-block">
 										<img
 											src="img/content/content-item-2.svg"
-											style="width: 100%"
+											style="width: 100%;"
 											alt="card-image"
 										/>
 										<div class="card-body">
@@ -500,7 +635,7 @@
 									<div class="content-block">
 										<img
 											src="img/content/content-item-3.svg"
-											style="width: 100%"
+											style="width: 100%;"
 											alt="card-image"
 										/>
 										<div class="card-body">
