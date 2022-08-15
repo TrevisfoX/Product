@@ -1,13 +1,11 @@
-// Preloader
 window.onload = () => {
 	let preloader = document.getElementById("preloader");
 
 	setTimeout(() => {
 		preloader.style.display = "none";
-	}, 3000);
+	}, 1500);
 };
 
-// Scroll to top
 const scrollButton = document.querySelector(".scroll");
 
 window.onscroll = () => {
@@ -21,3 +19,12 @@ window.onscroll = () => {
 scrollButton.onclick = () => {
 	window.scrollTo(0, 0);
 };
+
+const box = document.querySelectorAll(".box");
+
+box.forEach((item) => {
+	item.addEventListener("click", function () {
+		box.forEach((el) => el.classList.remove("active"));
+		this.classList.add("active");
+	});
+});
