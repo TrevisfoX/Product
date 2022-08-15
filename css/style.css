@@ -17,16 +17,16 @@ a:hover {
 }
 
 .wrapper {
+    position: relative;
     height: 100%;
     width: 100%;
-    position: relative;
     font-family: var(--font-family);
     background-color: var(--bg-color);
     color: var(--primary-color);
 }
 
 .container {
-    max-width: 1129px;
+    max-width: 1130px;
 }
 
 .title {
@@ -42,16 +42,16 @@ a:hover {
 }
 
 .button {
-    color: var(--primary-color);
-    background-color: var(--btn-color);
     font-weight: 600;
     font-size: 16px;
     line-height: 24px;
+    transition: 0.5s;
     border: none;
     text-decoration: none;
-    border-radius: var(--btn-b-radius);
-    transition: 0.5s;
     cursor: pointer;
+    color: var(--primary-color);
+    background-color: var(--btn-color);
+    border-radius: var(--btn-b-radius);
 }
 
 .main,
@@ -74,7 +74,6 @@ a:hover {
     margin: 0 0 50px 0;
 }
 
-.product-img,
 .description-title,
 .description-subtitle,
 .customer-subtitle,
@@ -103,9 +102,9 @@ a:hover {
 }
 
 .button-in {
+    padding: 10px 25px;
     background-color: inherit;
     border: 1px solid #BCD0E5;
-    padding: 10px 25px;
 }
 
 .button-up {
@@ -158,8 +157,8 @@ a:hover {
     margin: 0 0 100px 0;
 }
 
-.content-block {
-    cursor: pointer;
+.content-block:hover .card-title {
+    color: var(--btn-color);
 }
 
 .features-title {
@@ -206,10 +205,13 @@ a:hover {
 
 .card-body {
     background-color: var(--primary-color);
-    width: 100%;
     padding: 30px 30px 40px;
     border-bottom-left-radius: var(--block-b-radius);
     border-bottom-right-radius: var(--block-b-radius);
+}
+
+.content-block {
+    cursor: pointer;
 }
 
 .card-title {
@@ -228,9 +230,15 @@ a:hover {
 
 .price-box {
     padding: 25px 0px 40px;
-    background-color: var(--primary-color);
+    cursor: pointer;
     color: black;
+    background-color: var(--primary-color);
     border-radius: var(--block-b-radius);
+    transition: 0.5s;
+}
+
+.active {
+    transform: scale(1.045);
 }
 
 .price-header-title {
@@ -270,12 +278,15 @@ a:hover {
     padding: 10px 20px;
 }
 
+.button-order:hover {
+    background-color: #00b09b;
+}
+
 .subscribe-block {
     max-width: 920px;
     min-height: 345px;
     background-color: var(--btn-color);
     border-radius: 32px;
-
 }
 
 .subscribe-title {
@@ -410,5 +421,15 @@ a:hover {
 
     .subscribe-title {
         font-size: 28px;
+    }
+
+    #scrollToTop {
+        bottom: 25px;
+        right: 25px;
+    }
+
+    .img-to-top {
+        width: 30px;
+        height: 30px;
     }
 }
